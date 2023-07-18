@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. Baq</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo.ico" />
+
+
+    <!-- CSS-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+ <!-- Metadatos Informacion-->
+ <meta name="description" content="Restaurante con domicilios a Barranquilla y Soledad, cualquier plato que desees">
+
+ <meta name="keywords" content="Comida rapidas, comidas, rapidas, restaurante, mr baq, mr. baq, salchipapas, hamburguesas, alitas de pollo, alitas, patacon, pataconazos, asados, carne, pechuga">
+
+ <link rel="canonical" href="http://www.mrbaq.com/">
+
+ <meta property="og:locale" content="es_ES">
+ <meta property="og:site_name" content="Mr. Baq">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Mr. Baq">
+ <meta property="og:description" content=="Comida rapidas, comidas, rapidas, restaurante, mr baq, mr. baq, salchipapas, hamburguesas, alitas de pollo, alitas, patacon, pataconazos, asados, carne, pechuga">
+ <meta property="og:url" content="http://www.mrbaq.com/">
+ <meta property="og:image" content="http://www.mrbaq.com/img/logo.png">
+ <meta property="og:image:secure_url" content="http://www.mrbaq.com/img/logo.png">
+
+
+
+    <script src="carro.js"></script>
+</head>
+
+<body>
+    <div id="centerDiv">
+
+        <a href="#carrito" class="btn-flotante"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+          </svg></a>
+
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <img src="img/logo.png" alt="Logo Mr. Baq" class="logo">
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 align-items-stretch mb-5 mb-lg-0 ">
+                    <ul class="nav nav-tabs" id="categoriasTab" role="tablist"></ul>
+                    <div class="tab-content" id="categoriasContent"></div>
+                </div>
+
+                <!-- Carrito -->
+                <aside class="col-sm-12 col-md-4 col-lg-4 colorText">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+
+                    <!-- Precio total -->
+                    <h2 class="text-right">Total: &#36;<span id="total"></span></h2>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                    <hr>
+                    <div class="row colorText">
+                        <h2 class="text-righ">Datos del pedido</h2>
+                        <form autocomplete="on">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre"
+                                    placeholder="Ingrese su nombre" autocomplete="on" required>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6" id="c1">
+                                    <label for="direccion">Dirección - Barrio:</label>
+                                    <input type="text" class="form-control" id="direccion" name="direccion"
+                                        placeholder="Ingrese su dirección" autocomplete="on" required>
+                                </div>
+
+                                <div class="col-6" id="c2">
+                                    <label for="referencia">Punto de referencia:</label>
+                                    <input type="text" class="form-control" id="referencia" name="referencia"
+                                        placeholder="Ingrese un punto de referencia" autocomplete="on" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="direccion">Celular:</label>
+                                <input type="number" class="form-control" id="celular" name="celular"
+                                    placeholder="Ingrese su celular" maxlength="10" max="10" autocomplete="on" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Comentario">Comentario - nota adicional</label>
+                                <textarea name="comentario" id="comentario" rows="2" class="form-control"
+                                    placeholder="Si tiene un comentario o notación adicional por favor escribirla aqui" ></textarea>
+                            </div>
+                            <hr>
+                            <button type="button" id="hacer-pedido" class="btn btn-primary col-12">
+                                <h2>Hacer pedido</h2>
+                            </button>
+                        </form>
+                    </div>
+                    <hr>
+                </aside>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>PEDIDO</b></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12" id="contentPedido"> </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a type="button" id="confirmar-pedido" class="btn btn-primary" role="button">Confirmar Pedido</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
