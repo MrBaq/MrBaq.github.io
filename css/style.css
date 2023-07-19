@@ -5,15 +5,27 @@
 }
 
 body,
-main,
 input {
     background-color: black !important;
     background: black;
 }
 
+
+body {
+    background-image: url("../img/fondo.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    
+    background-size: initial;
+    background-position:center center; /*respecto a body*/
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+
 .card {
-    background-color: black !important;
+    background-color: transparent !important;
     color: white !important;
+    border: transparent !important;
 }
 
 .colorText {
@@ -54,7 +66,9 @@ img.logo {
 
 .nav-tabs .nav-link {
     border: var(--bs-nav-tabs-border-width) solid transparent;
-    color: red !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 13pt;
 }
 
 .nav-tabs .nav-link:hover {
@@ -67,6 +81,7 @@ img.logo {
     border-color: red !important;
     color: black !important;
     font-weight: bold !important;
+    font-size: 13pt;
 }
 
 .btn-danger {

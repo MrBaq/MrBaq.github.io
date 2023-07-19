@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderizarProductos() {
         // Obtener las categorías únicas de la base de datos
         const categorias = [...new Set(baseDeDatos.map((producto) => producto.categoria))];
-        categorias.unshift("Todos los productos"); // Agregar "Todos los productos"
+        categorias.unshift("Todos los platos"); // Agregar "Todos los productos"
 
         categorias.forEach((categoria, index) => {
             // Crear la pestaña
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }*/
 
             let productosCategoria = [];
-            if (categoria === "Todos los productos") {
+            if (categoria === "Todos los platos") {
                 productosCategoria = baseDeDatos; // Obtener todos los productos
             } else {
                 productosCategoria = baseDeDatos.filter((producto) => producto.categoria === categoria);
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const divColCarroText = document.createElement('div');
             divColCarroText.classList.add('col-10', 'col-sm-10', 'col-md-9', 'col-lg-10', 'col-xl-10');
 
-            const h6Carro = document.createElement('h6');
+            const h6Carro = document.createElement('h5');
             h6Carro.innerHTML = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${divisa}${miItem[0].precio.toLocaleString()}`;
 
             const divColCarroBoton = document.createElement('div');
